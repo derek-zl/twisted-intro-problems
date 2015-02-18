@@ -143,7 +143,8 @@ def poetry_main():
     for i, sock in enumerate(sockets):
         print 'Task %d: %d bytes of poetry' % (i + 1, len(sock.poem))
 
-    print 'Got %d poems in %s' % (len(addresses), elapsed)
+    #FIXME: Still takes credit for poems that timed out.
+    print 'Got %d poems in %s' % (len(sockets), elapsed)
 
 
 if __name__ == '__main__':
